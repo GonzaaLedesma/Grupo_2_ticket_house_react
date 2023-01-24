@@ -1,0 +1,40 @@
+.categoriasHouse{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    .divisor{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        .imgCategorias{
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+            img{
+                width: 15vw;
+                border-radius: 500px;
+            }
+            h5{
+                color: gold;
+                text-align: center;
+            }
+        }
+    }
+    .novedadesHome{
+        display: flex;
+        justify-content: space-around;
+        .miniEvento{
+            display: flex;
+            flex-direction: row;
+            border: solid 1px rgb(36, 44, 53);
+            box-shadow: 3px 3px 3px 3px;
+            width: 13%;
+            .iconoNovedad{
+                width: 80px;
+            }
+            h5{
+                color: gold;
+            }
+        }
+    }
+}

@@ -1,0 +1,20 @@
+
+.ajusteVista {
+  display: flex;
+  background-color: rgb(36, 44, 53) !important;
+}
+.userForm{
+  background-color: #1c2631!important;
+}
+.navVista{
+  width: 18vw;
+}
+.homeVista{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.carruselVista {
+  margin: 15px;
+  display: flex;
+}

@@ -1,0 +1,38 @@
+.navHouse{
+  background-color: #132231;
+  height: 100vh;
+  border-right:0.5px solid rgb(19, 19, 19) ;
+  box-shadow: 5px 0px 5px rgba(255, 196, 0, 0.726);
+  .logoHouse{
+    margin: auto;
+    margin-left: 2px;
+    padding: 5px;
+    width: 17.5vw;
+  }
+  .listHouse{
+    margin-top: 10px;
+      ul{
+        padding: 0 0 0 0;
+        text-decoration: none;
+        h5{
+          color: whitesmoke;
+          // text-align: center;
+          margin: 5px 5px 10px 2vw;
+          font-size: 25px;
+        }
+        li{
+          text-align: center;
+          color:white;
+          list-style:none;
+          font-size: 20px;
+          transition: 450ms;
+        }
+        li:hover{
+        border-right: 5px solid gold;
+        border-left: 5px solid gold;
+        background-color: rgb(27, 28, 36);
+        color: gold;
+      }
+    }
+  }
+}
