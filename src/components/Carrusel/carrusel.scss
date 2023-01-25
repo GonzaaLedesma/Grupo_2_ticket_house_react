@@ -2,10 +2,30 @@
     display: flex;
     justify-content: center;
     margin: auto;
-    background-color: rgb(44, 51, 58);
-    padding: 5px;
-    box-shadow: 2px 2px 2px 2px rgb(87, 87, 87);
+    background: linear-gradient(to top left, rgb(0, 23, 65, 0.089),rgba(0, 0, 0, 0.089) ,rgba(0, 0, 0, 0.089), rgba(0, 0, 0, 0.089), rgba(0, 0, 0, 0.089));
+    padding: 15px;
+    border: 2px solid rgb(117, 100, 1);
+    // box-shadow: 5px 1px 5px rgba(255, 196, 0, 0.726);
+    width: 85%;
+    // height: 99%;
     .carruselImg{
-        width: 80vw;
+        width: 100%;
+        margin: auto;
+
     }
+}
+.carousel-item-next, .carousel-item-prev, .carousel-item.active {
+    display: flex;
+    justify-content: center;
+}
+.carousel-control-next-icon {
+    background-color: black;
+    border-radius: 500px;
+}
+.carousel-control-prev-icon {
+    background-color: black;
+    border-radius: 500px;
+}
+.carousel-indicators{
+    background-color: rgba(0, 0, 0, 0.11);
 }

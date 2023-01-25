@@ -19,7 +19,7 @@ function Navbar() {
           <li>Carrito</li>
         </ul>
         <ul>
-          <h5>Sobre nosotros</h5>
+          <h5>Nosotros</h5>
           <li>Terminos</li>
           <li>Condiciones</li>
           <li>Preguntas</li>

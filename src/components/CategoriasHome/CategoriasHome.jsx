@@ -23,28 +23,6 @@ function CategoriasHome() {
           <h5>Pasados</h5>
         </div>
       </div>
-      <div className="novedadesHome">
-        <div className="miniEvento">
-          <img className="iconoNovedad" src={icono} alt="" />
-          <h5>Evento</h5>
-        </div>
-        <div className="miniEvento">
-          <img className="iconoNovedad" src={icono} alt="" />
-          <h5>Evento</h5>
-        </div>
-        <div className="miniEvento">
-          <img className="iconoNovedad" src={icono} alt="" />
-          <h5>Evento</h5>
-        </div>
-        <div className="miniEvento">
-          <img className="iconoNovedad" src={icono} alt="" />
-          <h5>Evento</h5>
-        </div>
-        <div className="miniEvento">
-          <img className="iconoNovedad" src={icono} alt="" />
-          <h5>Evento</h5>
-        </div>
-      </div>
     </div>
   );
 }

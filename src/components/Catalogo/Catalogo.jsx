@@ -1,31 +1,36 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class Catalogo extends Component {
-    constructor() {
-        super()
-        this.state = {
-            products : []
-        }
-    }
+  constructor() {
+    super();
+    this.state = {
+      products: [],
+    };
+  }
 
-    componentDidMount () {
-        fetch('http://localhost:3001/api/productos')
-         .then(response => response.json())
-         .then(products => {
-            this.setState({products : products})
-         })
-         .catch(error => console.log(error));
-    }
+  async componentDidMount() {
+    const data = await fetch("http://localhost:3001/api/usuarios", {
+        Method: 'GET',
+        headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          mode: 'no-cors', 
+                    credentials: 'include'
+    });
+    console.log(data);
+    const products = await data.json();
+    console.log(products);
+    this.setState({ products });
+  }
 
-    render () {
-        return (
-            <>
-                {/* <p> holis</p> */}
-            </>
-        )
-    }
-
-
+  render() {
+    return (
+      <>
+        {/* <p>hola</p> */}
+      </>
+    );
+  }
 }
 
 export default Catalogo;
