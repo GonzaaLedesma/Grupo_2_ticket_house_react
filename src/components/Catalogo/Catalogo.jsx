@@ -1,36 +1,36 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
+import "./catalogo.scss";
 
-class Catalogo extends Component {
-  constructor() {
-    super();
-    this.state = {
-      products: [],
-    };
-  }
+const Catalogo = ({ products }) => {
+  const data = products.products.map((item) => {
+    return item.product;
+  });
 
-  async componentDidMount() {
-    const data = await fetch("http://localhost:3001/api/usuarios", {
-        Method: 'GET',
-        headers: {
-            Accept: "application/json",
-            "Content-Type": "application/json",
-          },
-          mode: 'no-cors', 
-                    credentials: 'include'
-    });
-    console.log(data);
-    const products = await data.json();
-    console.log(products);
-    this.setState({ products });
-  }
-
-  render() {
-    return (
-      <>
-        {/* <p>hola</p> */}
-      </>
-    );
-  }
-}
-
+  return (
+    <div className="card">
+      {data.map((data) => (
+        <div className="">
+          <img src={data.img} className="" alt="ImgBand" />
+          <div className="">
+            <h5 className="">{data.nombre_evento}</h5>
+            <p className="">{data.sede}</p>
+            <p className="">{data.ubicacion}</p>
+            <p className="">Participacion: {data.participacion}</p>
+            <p className="">{data.fecha}</p>
+            {/* <Link
+            to={`/producto/detalles/${data.id}`}
+            className="btn btn-primary"
+            >
+            Ir a detalles
+          </Link> */}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+};
 export default Catalogo;
+
+// const filteredProducts = data.filter(
+//   (data) => data.id_categoria === 1
+// );

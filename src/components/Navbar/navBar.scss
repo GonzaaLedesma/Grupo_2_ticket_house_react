@@ -1,38 +1,144 @@
-.navHouse{
-  background: linear-gradient(to top right, rgb(0, 23, 65),rgb(2, 22, 20) , rgb(2, 2, 20), rgb(2, 2, 20));
-  height: 100%;
-  border-right:0.5px solid rgb(19, 19, 19) ;
-  box-shadow: 5px 0px 5px rgba(255, 196, 0, 0.726);
-  .logoHouse{
-    margin: auto;
-    margin-left: 2px;
-    padding: 5px;
-    width: 15vw;
-  }
-  .listHouse{
-    margin-top: 10px;
-      ul{
-        padding: 0 0 0 0;
-        text-decoration: none;
-        h5{
-          color: gray;
-          // text-align: center;
-          margin: 5px 5px 10px 2vw;
-          font-size: 25px;
-        }
-        li{
-          text-align: center;
-          color:gray;
-          list-style:none;
-          font-size: 20px;
-          transition: 450ms;
-        }
-        li:hover{
-        border-right: 5px solid wheat;
-        border-left: 5px solid white;
-        background-color: rgba(255, 255, 255, 0.014);
+.contenedorNavHouse {
+  width: 100vw;
+  background-color: #0f1418;
+  margin-top: 5px;
+  .navHouse {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 0;
+    .logoHouse {
+      width: 300px;
+      padding: 10px;
+    }
+    ul {
+      padding: 0;
+      width: 40%;
+      h5 {
+        width: 80%;
+        margin: auto;
+        margin-top: 2px;
         color: white;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 174, 0, 0.408);
+        border-radius: 50px;
+        padding-bottom: 3px;
+        margin-bottom: 0;
+        transition: all 950ms;
+      }
+      .dropDownHouse {
+        display: none;
+      }
+      .listHouse {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+
+        li {
+          color: white;
+          font-size: 20px;
+          list-style: none;
+          margin-top: 10px;
+          margin-left: 5px;
+          margin-right: 5px;
+          border-left: 1px solid rgba(245, 245, 245, 0.349);
+          border-right: 1px solid rgba(245, 245, 245, 0.349);
+          border-radius: 5px;
+          padding: 3px;
+          transition: all 450ms;
+        }
       }
     }
+  }
+}
+.links {
+  text-decoration: none;
+  color: white;
+  transition: all 450ms;
+}
+
+.navHouse ul div li:hover {
+  color: gold;
+  border-left: 1px solid rgb(255, 174, 0);
+  border-right: 1px solid rgb(255, 174, 0);
+  border-bottom: 1px solid rgb(255, 174, 0);
+}
+.links:hover {
+  color: gold;
+}
+.navHouse:hover ul h5 {
+  color: gold;
+  border-bottom: 1px solid rgb(255, 174, 0);
+  border-radius: 0;
+}
+
+.homeHouse {
+  margin-top: 5px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 250% 0;
+  }
+}
+html::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 7%;
+  background: linear-gradient(10deg, gold, blue, gold, blue, gold, blue, gold);
+  background-size: 800%;
+  border-radius: 10px;
+  filter: blur(8px);
+  animation: glowing 80s linear infinite;
+}
+
+@media (max-width: 785px) {
+  .contenedorNavHouse .navHouse ul .dropDownHouse {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  .contenedorNavHouse .navHouse ul .listHouse {
+    display: none;
+  }
+  [type="button"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  [type="submit"]:not(:disabled),
+  button:not(:disabled) {
+    border: 1px solid rgb(255, 174, 0);
+    background-color: transparent;
+    transition: all 700ms;
+  }
+  .btn-check:checked + .btn,
+  .btn.active,
+  .btn.show,
+  .btn:first-child:active,
+  :not(.btn-check) + .btn:active {
+    color: var(--bs-btn-active-color);
+    background-color: rgba(0, 0, 0, 0.781);
+    border-color: rgb(255, 190, 69);
+    border-radius: 15px;
+  }
+}
+@media (max-width: 515px) {
+  .contenedorNavHouse .navHouse ul h5{
+    font-size: 15px;
+    margin-top: 10px;
+    border-radius: 0px;
+  }
+  [type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled){
+    padding: 4px;
+    padding-left: 12px;
+    padding-right:12px ;
+  }
+  .contenedorNavHouse .navHouse .logoHouse{
+    width:50%;
   }
 }

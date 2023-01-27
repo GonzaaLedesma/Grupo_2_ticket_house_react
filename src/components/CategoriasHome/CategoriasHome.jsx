@@ -1,28 +1,19 @@
-import imgTest from "../../assets/images/Catalogo/ejemplo1.jpg";
-import icono from "../../assets/images/Catalogo/ejemplo.jpg";
+import img2 from "../../assets/images/Categorias/2.jpg";
+import img3 from "../../assets/images/Categorias/3.jpg";
+import img4 from "../../assets/images/Categorias/4.jpg";
+import img1 from "../../assets/images/Categorias/1.jpg";
 import "./categoriasHome.scss";
+import { useNavigate } from "react-router-dom";
 
 function CategoriasHome() {
+  const navigate = useNavigate();
+  const handleOnClick =(navigateUrl) => navigate(`/${navigateUrl}`, {replace: true});
   return (
     <div className="categoriasHouse">
-      <div className="divisor">
-        <div className="imgCategorias">
-          <img src={imgTest} alt="" />
-          <h5>Actuales</h5>
-        </div>
-        <div className="imgCategorias">
-          <img src={imgTest} alt="" />
-          <h5>Nuevos</h5>
-        </div>
-        <div className="imgCategorias">
-          <img src={imgTest} alt="" />
-          <h5>Proximos</h5>
-        </div>
-        <div className="imgCategorias">
-          <img src={imgTest} alt="" />
-          <h5>Pasados</h5>
-        </div>
-      </div>
+      <img onClick={()=>handleOnClick("products")} src={img2}  title="Nuevos" />
+      <img onClick={()=>handleOnClick("products")} src={img3}  title="Actuales" />
+      <img onClick={()=>handleOnClick("products")} src={img4}  title="Proximos" />
+      <img onClick={()=>handleOnClick("products")} src={img1}  title="Pasados" />
     </div>
   );
 }
