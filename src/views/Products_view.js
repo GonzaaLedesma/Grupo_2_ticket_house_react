@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Catalogo from '../components/Catalogo'
 import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 
 
 const Products = () => {
@@ -18,11 +19,12 @@ const Products = () => {
       .catch(error => console.error(error));
   },[])
 
-    if(products.length == 0) return null;
+    if(products.length === 0) return null;
   return (
     <div>
         <Navbar/>
         <Catalogo products={products}/>
+        <Footer/>
     </div>
   )
 }

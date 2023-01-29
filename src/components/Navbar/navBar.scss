@@ -10,6 +10,7 @@
     .logoHouse {
       width: 300px;
       padding: 10px;
+      cursor: crosshair;
     }
     ul {
       padding: 0;
@@ -83,6 +84,9 @@
   50% {
     background-position: 250% 0;
   }
+}
+html{
+  background-color: black;
 }
 html::before {
   content: "";
