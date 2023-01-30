@@ -20,10 +20,8 @@
         margin-bottom: 1vw;
       }
     }
-    .form-group-login {
-      margin-top: 50px;
-      margin-bottom: 50px;
-      .loginLabel {
+    .form-group {
+      label {
         text-align: center;
         color: orange;
         transition: all 450ms;
@@ -32,8 +30,8 @@
         width: 100%;
         border-top: 1px solid orange;
         border-bottom: 1px solid gold;
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin-top: 4px;
+        margin-bottom: 4px;
         font-size: larger;
       }
       input {
@@ -43,8 +41,8 @@
         border-radius: 15px;
         color: white;
         border: #181d22;
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin-top: 4px;
+        margin-bottom: 4px;
         text-align: center;
       }
     }

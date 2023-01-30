@@ -17,8 +17,8 @@ const Ingreso = () => {
     <div className="contenedorLogin">
       <form onSubmit={handleSubmit}>
         <h2>Login</h2>
-        <div className="form-group">
-          <label htmlFor="email">Email</label>
+        <div className="form-group-login">
+          <label className="loginLabel" htmlFor="email">Email</label>
           <input
             type="email"
             className="form-control"
@@ -27,8 +27,8 @@ const Ingreso = () => {
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
-        <div className="form-group">
-          <label htmlFor="username">Username</label>
+        <div className="form-group-login">
+          <label className="loginLabel" htmlFor="username">Username</label>
           <input
             type="text"
             className="form-control"
@@ -37,8 +37,8 @@ const Ingreso = () => {
             onChange={(e) => setUsername(e.target.value)}
           />
         </div>
-        <div className="form-group">
-          <label htmlFor="password">Password</label>
+        <div className="form-group-login">
+          <label className="loginLabel" htmlFor="password">Password</label>
           <input
             type="password"
             className="form-control"

@@ -88,11 +88,6 @@ const Catalogo = ({ products }) => {
                 <p>{pasados.ubicacion}</p>
                 <p>Participacion: {pasados.participacion}</p>
                 <p>{pasados.fecha}</p>
-                <button>
-                <Link to={`/products/${pasados.id}`} className="redireccion">
-                    Ir a detalles
-                  </Link>
-                </button>
               </div>
             </div>
           ))}

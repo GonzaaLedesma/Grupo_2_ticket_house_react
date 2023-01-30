@@ -18,15 +18,17 @@ function Navbar() {
                 Ticket
               </Dropdown.Toggle>
               <Dropdown.Menu>
-                <Link to="/">
-                  <Dropdown.Item>Home</Dropdown.Item>
-                </Link>
-                <Link to="/products">
-                  <Dropdown.Item>Catalogo</Dropdown.Item>
-                </Link>
-                <Link to="/Statistics">
-                  <Dropdown.Item>Estadisticas</Dropdown.Item>
-                </Link>
+                <Dropdown.Item>
+                  <Link to="/">Home</Link>
+                </Dropdown.Item>
+
+                <Dropdown.Item>
+                  <Link to="/products">Catalogo</Link>
+                </Dropdown.Item>
+
+                <Dropdown.Item>
+                  <Link to="/Statistics">Estadisticas</Link>
+                </Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
           </div>
@@ -59,15 +61,17 @@ function Navbar() {
                 House
               </Dropdown.Toggle>
               <Dropdown.Menu>
-                <Link to="/Login">
-                  <Dropdown.Item>Login</Dropdown.Item>
-                </Link>
-                <Link to="/products">
-                  <Dropdown.Item>Registro</Dropdown.Item>
-                </Link>
-                <Link to="/News">
-                  <Dropdown.Item>Novedades</Dropdown.Item>
-                </Link>
+                <Dropdown.Item>
+                  <Link to="/Login">Login</Link>
+                </Dropdown.Item>
+
+                <Dropdown.Item>
+                  <Link to="/products">Registro</Link>
+                </Dropdown.Item>
+
+                <Dropdown.Item>
+                  <Link to="/News">Novedades</Link>
+                </Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
           </div>

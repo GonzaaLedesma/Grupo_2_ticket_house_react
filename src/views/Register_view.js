@@ -1,19 +1,17 @@
-import React, { useContext, useEffect } from "react";
-import { AuthContext } from "../context/userContext";
+import React from "react";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import Register from "../components/Register";
+import Registro from "../components/Registro";
 
-const Login_view = () => {
-  const { user, isLoggedIn, login, logout } = useContext(AuthContext);
+const Register_view = () => {
 
   return (
     <div>
       <Navbar/>
-      <Register/>
+      <Registro/>
       <Footer />
     </div>
   );
 };
 
-export default Login_view;
+export default Register_view;

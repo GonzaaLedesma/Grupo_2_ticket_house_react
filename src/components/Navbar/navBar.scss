@@ -77,6 +77,24 @@
   margin-top: 5px;
 }
 
+.dropdown-menu{
+  background-color: #0f1418;
+  position: absolute;
+  inset: 0px auto auto 0px;
+  transform: translate3d(-30px, 40px, 0px) !important;
+  .dropdown-item{
+    a{
+      color:white;
+      text-decoration: none;
+      text-align: center;
+      transition: all 450ms;
+    }
+  }
+}
+.dropdown-menu:hover .dropdown-item a{
+  color: orange;
+}
+
 @keyframes glowing {
   0% {
     background-position: 0 0;
@@ -103,7 +121,7 @@ html::before {
   animation: glowing 80s linear infinite;
 }
 
-@media (max-width: 785px) {
+@media (max-width: 870px) {
   .contenedorNavHouse .navHouse ul .dropDownHouse {
     display: flex;
     justify-content: center;
