@@ -78,7 +78,7 @@ function Navbar() {
               </Link>
             </li>
             <li>
-              <Link className="links" to="/products">
+              <Link className="links" to="/Register">
                 Registro
               </Link>
             </li>
