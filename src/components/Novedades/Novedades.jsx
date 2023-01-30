@@ -79,9 +79,9 @@ const Novedades = ({ carrito, products, users }) => {
         </div>
       </div>
       <h1>Eventos mas vendidos</h1>
-      <div className="contenedorNoticias">
+      <div className="contenedorNoticiasExtra">
         {filteredProductsArray.map((product) => (
-          <div className="panelDatos">
+          <div className="panelDatosExtra">
             <div>
               <h1>{product.nombre_evento}</h1>
               <h2>
@@ -96,9 +96,9 @@ const Novedades = ({ carrito, products, users }) => {
         ))}
       </div>
       <h1>Ultimos 5 vendidos</h1>
-      <div className="contenedorNoticias">
+      <div className="contenedorNoticiasExtra">
         {filteredCartArray.map((product) => (
-          <div className="panelDatos">
+          <div className="panelDatosExtra">
             <div>
               <h1>{product.nombre_evento}</h1>
               <h2>

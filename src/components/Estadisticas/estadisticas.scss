@@ -5,6 +5,7 @@
   .contenedorPaneles {
     width: 100%;
     display: flex;
+    justify-content: flex-start;
     margin: auto;
     background-color: black;
     border-bottom: 1px solid orange;
