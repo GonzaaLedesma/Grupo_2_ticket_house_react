@@ -12,9 +12,9 @@ const Catalogo = ({ products }) => {
   return (
     <>
       <div className="catalogo">
-        {data.length === 0 && <p>Cargando</p>}
         {/* actuales */}
         <h1>Actuales</h1>
+        {actuales.length === 0 && <p>Cargando</p>}
         <div className="categorias">
           {actuales.map((actuales) => (
             <div className="bodyCard">
@@ -37,6 +37,7 @@ const Catalogo = ({ products }) => {
         {/* nuevos */}
         <h1>Nuevos</h1>
         <div className="categorias">
+        {nuevos.length === 0 && <p>Cargando</p>}
         {nuevos.map((nuevos) => (
           <div className="bodyCard">
             <img src={nuevos.img} alt="ImgBand" />
@@ -58,6 +59,7 @@ const Catalogo = ({ products }) => {
         {/* proximos */}
         <h1>Proximos</h1>
         <div className="categorias">
+        {proximos.length === 0 && <p>Cargando</p>}
           {proximos.map((proximos) => (
             <div className="bodyCard">
               <img src={proximos.img} alt="ImgBand" />
@@ -79,6 +81,7 @@ const Catalogo = ({ products }) => {
         {/* pasados */}
         <h1>Pasados</h1>
         <div className="categorias">
+        {pasados.length === 0 && <p>Cargando</p>}
           {pasados.map((pasados) => (
             <div className="bodyCard">
               <img src={pasados.img} alt="ImgBand" />

@@ -72,12 +72,12 @@
     margin-top: 30px;
   }
 }
-// .contendedo .contenedorPaneles::-webkit-scrollbar {
-//   background: #1e2731;
-// }
-// .contendedo .contenedorPaneles::-webkit-scrollbar-thumb {
-//   background: rgb(94, 94, 94);
-// }
+.contenedorNoticias::-webkit-scrollbar {
+  background: #1e2731;
+}
+.contenedorNoticias::-webkit-scrollbar-thumb {
+  background: rgb(94, 94, 94);
+}
 @media (max-width: 1283px) {
   .contenedorNoticias {
     justify-content: start;

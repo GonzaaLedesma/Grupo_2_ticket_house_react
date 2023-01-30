@@ -1,3 +1,14 @@
+html{
+  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+html::-webkit-scrollbar {
+  background: #1e2731;
+}
+html::-webkit-scrollbar-thumb {
+  background: rgb(94, 94, 94);
+}
 .contenedorNavHouse {
   width: 100vw;
   background-color: #0f1418;
@@ -112,7 +123,7 @@ html::before {
   top: -20px;
   left: 0;
   z-index: -1;
-  width: 100vw;
+  width: 99vw;
   height: 7%;
   background: linear-gradient(10deg, gold, blue, gold, blue, gold, blue, gold);
   background-size: 800%;
