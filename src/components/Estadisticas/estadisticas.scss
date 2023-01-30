@@ -1,0 +1,44 @@
+.contendedo {
+  background-color: black;
+  padding-top: 1vw;
+
+  .contenedorPaneles {
+    width: 100%;
+    display: flex;
+    margin: auto;
+    background-color: black;
+    border-bottom: 1px solid orange;
+    margin-top: 1vw;
+    padding-bottom: 50px;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    overflow-x: auto;
+    .paneles {
+      height: 250px;
+      border: 1px solid orange;
+      border-radius: 25px;
+      scroll-snap-align: center;
+      text-align: center;
+      min-width: 320px !important;
+      padding: 0.5rem;
+      margin: 10px;
+      margin-left: 40px;
+      transition: all 0.5s;
+      h4 {
+        font-size: 40px;
+        color: antiquewhite;
+      }
+      h5 {
+        color: orange;
+        font-size: 65px;
+        margin-top: 30px;
+      }
+    }
+  }
+}
+.contendedo .contenedorPaneles::-webkit-scrollbar {
+    background: #1e2731;
+}
+.contendedo .contenedorPaneles::-webkit-scrollbar-thumb {
+    background: rgb(94, 94, 94);
+}

@@ -15,17 +15,17 @@ function Navbar() {
           <div className="dropDownHouse">
             <Dropdown>
               <Dropdown.Toggle variant="success" id="dropdown-basic">
-                Button
+                Ticket
               </Dropdown.Toggle>
               <Dropdown.Menu>
-                <Link>
-                  <Dropdown.Item>Action</Dropdown.Item>
+                <Link to="/">
+                  <Dropdown.Item>Home</Dropdown.Item>
                 </Link>
-                <Link>
-                  <Dropdown.Item>Action</Dropdown.Item>
+                <Link to="/products">
+                  <Dropdown.Item>Catalogo</Dropdown.Item>
                 </Link>
-                <Link>
-                  <Dropdown.Item>Action</Dropdown.Item>
+                <Link to="/Statistics">
+                  <Dropdown.Item>Estadisticas</Dropdown.Item>
                 </Link>
               </Dropdown.Menu>
             </Dropdown>
@@ -37,18 +37,18 @@ function Navbar() {
               </Link>
             </li>
             <li>
-              <Link className="links" to="products">
+              <Link className="links" to="/products">
                 Catalogo
               </Link>
             </li>
             <li>
-              <Link className="links" to="Statistics">
-              Estadisticas
+              <Link className="links" to="/Statistics">
+                Estadisticas
               </Link>
             </li>
           </div>
         </ul>
-        <Link to="/">
+        <Link className="linkLogo" to="/">
           <img className="logoHouse" alt="logo" src={logo} />
         </Link>
         <ul>
@@ -56,17 +56,17 @@ function Navbar() {
           <div className="dropDownHouse">
             <Dropdown>
               <Dropdown.Toggle variant="success" id="dropdown-basic">
-                Button
+                House
               </Dropdown.Toggle>
               <Dropdown.Menu>
-                <Link>
-                  <Dropdown.Item>Action</Dropdown.Item>
+                <Link to="/Login">
+                  <Dropdown.Item>Login</Dropdown.Item>
                 </Link>
-                <Link>
-                  <Dropdown.Item>Action</Dropdown.Item>
+                <Link to="/products">
+                  <Dropdown.Item>Registro</Dropdown.Item>
                 </Link>
-                <Link>
-                  <Dropdown.Item>Action</Dropdown.Item>
+                <Link to="/News">
+                  <Dropdown.Item>Novedades</Dropdown.Item>
                 </Link>
               </Dropdown.Menu>
             </Dropdown>
@@ -78,13 +78,13 @@ function Navbar() {
               </Link>
             </li>
             <li>
-              <Link className="links" to="products">
+              <Link className="links" to="/products">
                 Registro
               </Link>
             </li>
             <li>
-              <Link className="links" to="products">
-                Usuarios
+              <Link className="links" to="/News">
+                Novedades
               </Link>
             </li>
           </div>

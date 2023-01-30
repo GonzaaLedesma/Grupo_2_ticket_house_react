@@ -13,7 +13,7 @@ const Statistics_view = () => {
         .then(response => response.json())
         .then(data => {
           setProducts({
-            products:data.productsWithDetail
+            products:data
           })
         })
         .catch(error => console.error(error));
