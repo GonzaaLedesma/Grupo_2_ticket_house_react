@@ -2,12 +2,10 @@ import React from "react";
 import "./novedades.scss";
 
 const Novedades = ({ carrito, products, users }) => {
-  // console.log(products.products.productsWithDetail);
   const allProducts = products.products.productsWithDetail;
   const productsArray = allProducts.map((item) => item.product);
   const ultimoProducto = productsArray[productsArray.length - 1];
 
-  // console.log(users.users);
   const allUsers = users.users.usuarioWithDetail;
   const usersArray = allUsers.map((item) => item.usuario);
   const ultimoUsuario = usersArray[usersArray.length - 1];
@@ -19,23 +17,25 @@ const Novedades = ({ carrito, products, users }) => {
     .reduce((acc, item) => acc + item.cantidad, 0);
 
   const cartArray = allCart
-    .filter(
-      (item) =>
-        item.activo === true && (item.cantidad === 5 || item.cantidad === 4)
-    )
+    .sort(function (a, b) {
+      return b.cantidad - a.cantidad;
+    })
+    .filter(function (item) {
+      return item.activo === true;
+    })
     .map((item) => item.evento_id);
 
   const filteredProductsArray = productsArray.filter((product) =>
     cartArray.some((eventId) => eventId === product.id)
   );
 
-  const lastCartArray = allCart.map((item) => item.evento_id);
-  const ultimoCarrito = lastCartArray.slice(-5);
-  const filteredCartArray = productsArray.filter((product) =>
-  ultimoCarrito.some((eventId) => eventId === product.id)
-);
+  const ultimoCarrito = new Set(cartArray);
 
-  console.log(ultimoCarrito);
+  const setArray = [...ultimoCarrito].slice(0, 5);
+  const filteredCartArray = productsArray.filter((product) =>
+    setArray.some((eventId) => eventId === product.id)
+  );
+
   return (
     <div>
       <h1>Ultimo Producto Y Usuario </h1>
