@@ -2,23 +2,24 @@ import React from "react";
 import "./novedades.scss";
 
 const Novedades = ({ carrito, products, users }) => {
+  //
   const allProducts = products.products.productsWithDetail;
   const productsArray = allProducts.map((item) => item.product);
   const ultimoProducto = productsArray[productsArray.length - 1];
-
+  //
   const allUsers = users.users.usuarioWithDetail;
   const usersArray = allUsers.map((item) => item.usuario);
   const ultimoUsuario = usersArray[usersArray.length - 1];
-
+  //
   const allCart = carrito.carrito.count.rows;
   const totalVentas = carrito.carrito.count.count;
   const totalTickets = allCart
     .filter((item) => item.activo === true)
     .reduce((acc, item) => acc + item.cantidad, 0);
-
-  const cartArray = allCart
-    .sort(function (a, b) {
-      return b.cantidad - a.cantidad;
+  //
+  const cartArrayCant = allCart
+    .filter(function (item) {
+      return item.cantidad === 5;
     })
     .filter(function (item) {
       return item.activo === true;
@@ -26,16 +27,21 @@ const Novedades = ({ carrito, products, users }) => {
     .map((item) => item.evento_id);
 
   const filteredProductsArray = productsArray.filter((product) =>
-    cartArray.some((eventId) => eventId === product.id)
+    cartArrayCant.some((eventId) => eventId === product.id)
   );
+  //
+  const cart5Ventas = carrito.carrito.carrito5Ventas;
 
-  const ultimoCarrito = new Set(cartArray);
+  const cartArrayUltimo = cart5Ventas
+    .filter(function (item) {
+      return item.activo === true;
+    })
+    .map((item) => item.evento_id);
 
-  const setArray = [...ultimoCarrito].slice(0, 5);
   const filteredCartArray = productsArray.filter((product) =>
-    setArray.some((eventId) => eventId === product.id)
+    cartArrayUltimo.some((eventId) => eventId === product.id)
   );
-
+  //
   return (
     <div>
       <h1>Ultimo Producto Y Usuario </h1>
@@ -95,7 +101,7 @@ const Novedades = ({ carrito, products, users }) => {
           </div>
         ))}
       </div>
-      <h1>Ultimos 5 vendidos</h1>
+      <h1>Ultimos vendidos</h1>
       <div className="contenedorNoticiasExtra">
         {filteredCartArray.map((product) => (
           <div className="panelDatosExtra">
