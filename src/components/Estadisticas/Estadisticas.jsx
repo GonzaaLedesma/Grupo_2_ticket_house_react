@@ -47,7 +47,7 @@ const Estadisticas = ({ products, users }) => {
         </div>
       </div>
       <br />
-      <h1>Usuarios Y sus Gustos</h1>
+      <h1>Usuarios Y sus Gustos Favoritos</h1>
       <div className="contenedorPaneles">
         <div className="paneles">
           <h4>Total Usuarios</h4>
